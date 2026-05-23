@@ -4,7 +4,6 @@ import { useRef, useState, useEffect, useCallback, type ComponentProps } from "r
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { exteriorImages } from "@/config/images";
-import { mediaPath } from "@/lib/utils";
 import LightboxModal from "@/components/ui/LightboxModal";
 import CinematicCarousel from "@/components/ui/CinematicCarousel";
 
@@ -22,7 +21,7 @@ const gradients = [
 ];
 
 const images = exteriorImages.map((img, i) => ({
-  src: mediaPath(img.src),
+  src: img.src,
   label: img.label || `Exterior ${i + 1}`,
   gradient: gradients[i % gradients.length],
 }));

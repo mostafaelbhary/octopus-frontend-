@@ -7,6 +7,8 @@ const outDir = path.join(__dirname, "..", "config");
 const imageExts = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif"]);
 const videoExts = new Set([".mp4", ".webm", ".mov", ".avi"]);
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 function labelFromName(name, index) {
   const clean = name.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
   if (/^(Photo|IMG|VID|WhatsApp|Screenshot)/i.test(clean)) {
@@ -24,7 +26,7 @@ function scanDir(dir) {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
     if (!stat.isFile()) continue;
-    const relPath = "/images/" + path.basename(dir) + "/" + file;
+    const relPath = BASE_PATH + "/images/" + path.basename(dir) + "/" + file;
     if (imageExts.has(ext)) {
       const label = labelFromName(file, results.images.length + 1) || `${path.basename(dir)} ${results.images.length + 1}`;
       results.images.push({ src: relPath, label });

@@ -4,34 +4,32 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { exteriorImages, cabinsImages, foodImages } from "@/config/images";
-import { mediaPath } from "@/lib/utils";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const mp = (src?: string) => mediaPath(src || "");
 const projects = [
   {
     title: "Luxury Exterior Experience",
     category: "Premium Yacht Design",
     description:
       "Step aboard and experience the breathtaking exterior spaces of M/Y Octopus. From the panoramic sundeck to the infinity pool, every detail is crafted for luxury and relaxation on the Red Sea.",
-    img: mp(exteriorImages[0]?.src),
+    img: exteriorImages[0]?.src || "",
   },
   {
     title: "Premium Cabins & Comfort",
     category: "Luxury Accommodations",
     description:
       "Our cabins and suites offer unparalleled comfort with ocean views, premium amenities, and elegant design. Each space is a private sanctuary crafted for the discerning traveler.",
-    img: mp(cabinsImages[0]?.src),
+    img: cabinsImages[0]?.src || "",
   },
   {
     title: "Dining & Onboard Lifestyle",
     category: "Culinary Excellence",
     description:
       "World-class dining meets ocean views. Our onboard chefs craft exquisite multi-course menus using the freshest ingredients, complemented by premium beverages and sunset cocktail service.",
-    img: mp(foodImages[0]?.src) || mp(exteriorImages[1]?.src) || "",
+    img: foodImages[0]?.src || exteriorImages[1]?.src || "",
   },
 ];
 

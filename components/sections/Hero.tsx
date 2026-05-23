@@ -5,7 +5,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { siteConfig } from "@/config/site";
 import { exteriorImages } from "@/config/images";
-import { mediaPath } from "@/lib/utils";
 import Button from "@/components/ui/Button";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -101,7 +100,7 @@ export default function Hero() {
 
         {exteriorImages.length > 0 && (
           <img
-            src={mediaPath(exteriorImages[0].src)}
+            src={exteriorImages[0].src}
             alt=""
             className="absolute inset-0 h-full w-full object-cover"
             onLoad={() => ScrollTrigger.refresh()}

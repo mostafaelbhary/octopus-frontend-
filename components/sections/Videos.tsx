@@ -4,7 +4,6 @@ import { useRef, useState, useEffect, useCallback, type ComponentProps } from "r
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { videosList } from "@/config/images";
-import { mediaPath } from "@/lib/utils";
 import VideoModal from "@/components/ui/VideoModal";
 import CinematicCarousel from "@/components/ui/CinematicCarousel";
 
@@ -21,7 +20,7 @@ const videoMeta = [
 const videos = videosList.map((v, i) => ({
   title: videoMeta[i]?.title || v.title || `Video ${i + 1}`,
   description: videoMeta[i]?.description || "",
-  src: mediaPath(v.src),
+  src: v.src,
 }));
 
 export default function Videos() {

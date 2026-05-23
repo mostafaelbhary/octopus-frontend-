@@ -2,7 +2,6 @@
 
 import { useRef, useEffect, useCallback } from "react";
 import { gsap } from "gsap";
-import { mediaPath } from "@/lib/utils";
 
 interface VideoModalProps {
   isOpen: boolean;
@@ -92,7 +91,7 @@ export default function VideoModal({ isOpen, onClose, videoTitle, videoSrc }: Vi
         <div className="aspect-video w-full bg-black">
           {videoSrc ? (
             <video
-              src={mediaPath(videoSrc || "")}
+              src={videoSrc || ""}
               controls
               autoPlay
               className="h-full w-full"

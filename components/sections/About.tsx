@@ -4,7 +4,6 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { exteriorImages } from "@/config/images";
-import { mediaPath } from "@/lib/utils";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 
@@ -123,7 +122,7 @@ export default function About() {
           >
             {exteriorImages[0]?.src && (
               <img
-                src={mediaPath(exteriorImages[0].src)}
+                src={exteriorImages[0].src}
                 alt="M/Y Octopus"
                 className="absolute inset-0 h-full w-full object-cover"
                 onLoad={() => ScrollTrigger.refresh()}
