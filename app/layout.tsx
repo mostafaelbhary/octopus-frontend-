@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "luxury yacht Red Sea",
   ],
   metadataBase: new URL("https://mostafaelbhary.github.io/octopus-frontend-/"),
+  other: {
+    "google-site-verification": "pSZnQPv3QbP929DE0df1fs58VTE2-URsQ23Is3gnTTc",
+  },
   openGraph: {
     title: "M/Y Octopus – Red Sea Luxury Liveaboard Experience",
     description:
