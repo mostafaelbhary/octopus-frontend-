@@ -4,6 +4,7 @@ import { useRef, useState, useEffect, useCallback, type ComponentProps } from "r
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cabinsImages } from "@/config/images";
+import { mediaPath } from "@/lib/utils";
 import LightboxModal from "@/components/ui/LightboxModal";
 import CinematicCarousel from "@/components/ui/CinematicCarousel";
 
@@ -19,7 +20,7 @@ const gradients = [
 ];
 
 const allImages = cabinsImages.map((img, i) => ({
-  src: img.src,
+  src: mediaPath(img.src),
   label: img.label || `Cabin ${i + 1}`,
   gradient: gradients[i % gradients.length],
 }));

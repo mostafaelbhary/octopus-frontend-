@@ -3,6 +3,7 @@
 import { useRef, useEffect, useCallback } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { mediaPath } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -163,7 +164,7 @@ export default function LightboxModal({ isOpen, onClose, images, currentIndex, o
         <div ref={imageRef} className="overflow-hidden rounded-2xl">
           {image.src ? (
             <img
-              src={image.src}
+              src={mediaPath(image.src)}
               alt={image.label}
               className="aspect-[16/10] w-full object-cover"
               onLoad={() => ScrollTrigger.refresh()}

@@ -4,6 +4,7 @@ import { useRef, useState, useEffect, useCallback, type ComponentProps } from "r
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { foodImages, foodVideos } from "@/config/images";
+import { mediaPath } from "@/lib/utils";
 import VideoModal from "@/components/ui/VideoModal";
 import LightboxModal from "@/components/ui/LightboxModal";
 import CinematicCarousel from "@/components/ui/CinematicCarousel";
@@ -19,13 +20,13 @@ const gradients = [
 ];
 
 const images = foodImages.map((img, i) => ({
-  src: img.src,
+  src: mediaPath(img.src),
   label: img.label || `Food ${i + 1}`,
   gradient: gradients[i % gradients.length],
 }));
 
 const featureVideo = foodVideos.length > 0
-  ? { title: foodVideos[0].title || "Culinary Journey Aboard Octups", src: foodVideos[0].src }
+  ? { title: foodVideos[0].title || "Culinary Journey Aboard Octups", src: mediaPath(foodVideos[0].src) }
   : { title: "Culinary Journey Aboard Octups", src: "" };
 
 export default function FoodMore() {
@@ -155,8 +156,10 @@ export default function FoodMore() {
                   <video
                     src={featureVideo.src}
                     muted
+                    loop
+                    autoPlay
                     playsInline
-                    preload="metadata"
+                    preload="auto"
                     className="absolute inset-0 h-full w-full object-cover"
                   />
                 )}
