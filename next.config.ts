@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const basePath = "/octopus-frontend-";
 
 const nextConfig: NextConfig = {
   output: "export",
   basePath,
-  assetPrefix: basePath ? `${basePath}/` : undefined,
+  assetPrefix: `${basePath}/`,
   trailingSlash: true,
   images: {
     unoptimized: true,

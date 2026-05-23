@@ -7,7 +7,7 @@ const outDir = path.join(__dirname, "..", "config");
 const imageExts = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif"]);
 const videoExts = new Set([".mp4", ".webm", ".mov", ".avi"]);
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const BASE_PATH = "/octopus-frontend-";
 
 function labelFromName(name, index) {
   const clean = name.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());

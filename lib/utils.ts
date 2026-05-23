@@ -1,12 +1,12 @@
+export const BASE_PATH = "/octopus-frontend-";
+
 export function cn(...classes: (string | boolean | undefined | null)[]): string {
   return classes.filter(Boolean).join(" ");
 }
 
 export function mediaPath(src: string): string {
-  if (!src) return src;
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  if (!basePath) return src;
-  return src.startsWith("/") ? `${basePath}${src}` : `${basePath}/${src}`;
+  if (!src || src.startsWith(BASE_PATH)) return src;
+  return src.startsWith("/") ? `${BASE_PATH}${src}` : `${BASE_PATH}/${src}`;
 }
 
 export function clamp(value: number, min: number, max: number): number {
