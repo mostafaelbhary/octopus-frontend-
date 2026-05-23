@@ -9,11 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const footerLinks = [
   {
-    title: "Voyages",
+    title: "Destinations",
     links: [
-      { label: "Mediterranean", href: "#showcase" },
-      { label: "Caribbean", href: "#showcase" },
-      { label: "Aegean Sea", href: "#showcase" },
+      { label: "St. John's Reef", href: "#showcase" },
+      { label: "Rocky Island", href: "#showcase" },
+      { label: "Zabargad", href: "#showcase" },
       { label: "Private Charter", href: "#cta" },
     ],
   },

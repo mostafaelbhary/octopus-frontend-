@@ -8,7 +8,7 @@ export const siteConfig = {
     whatsapp: "https://wa.me/201282256562",
     facebook: "https://www.facebook.com/share/1DPi6UKhFV/",
     instagram:
-      "https://www.instagram.com/octopus____liveaboard?igsh=Y3FlaDd6dnRoaHdk",
+      "https://www.instagram.com/ramyelbahlwanofficial?igsh=MW95b2ZjZ3lmc2U2cQ==",
     tiktok:
       "https://www.tiktok.com/@ramyelbahlwan?_r=1&_t=ZS-96aBclfX7Hc",
     email: "hello@octups.com",

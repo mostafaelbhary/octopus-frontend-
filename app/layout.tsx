@@ -27,10 +27,12 @@ export const metadata: Metadata = {
     "premium diving Egypt",
     "luxury yacht Red Sea",
   ],
+  metadataBase: new URL("https://mostafaelbhary.github.io/octopus-frontend-/"),
   openGraph: {
     title: "M/Y Octopus – Red Sea Luxury Liveaboard Experience",
     description:
       "Ultra-luxury 5-deck liveaboard for premium Red Sea diving expeditions. Explore St. John's Reef, Rocky Island & Zabargad.",
+    url: "https://mostafaelbhary.github.io/octopus-frontend-/",
     type: "website",
     locale: "en_US",
     siteName: "Octups",
