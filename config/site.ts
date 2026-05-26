@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "M/Y Octopus – Red Sea Luxury Liveaboard",
   description:
     "Explore the Red Sea aboard M/Y Octopus, an ultra-luxury 5-deck liveaboard. Premium diving expeditions to St. John's Reef, Rocky Island & Zabargad. Book your Red Sea diving safari.",
-  url: "https://octups.com",
+  url: "https://mostafaelbhary.github.io/octopus-frontend-",
   social: {
     whatsapp: "https://wa.me/201282256562",
     facebook: "https://www.facebook.com/share/1DPi6UKhFV/",

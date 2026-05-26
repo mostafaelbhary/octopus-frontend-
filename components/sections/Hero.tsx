@@ -98,14 +98,14 @@ export default function Hero() {
           backgroundSize: "40px 40px",
         }} />
 
-        {exteriorImages.length > 0 && (
-          <img
-            src={exteriorImages[0].src}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover"
-            onLoad={() => ScrollTrigger.refresh()}
-          />
-        )}
+          {exteriorImages.length > 0 && (
+            <img
+              src={exteriorImages[0].src}
+              alt="M/Y Octopus luxury yacht on the Red Sea"
+              className="absolute inset-0 h-full w-full object-cover"
+              onLoad={() => ScrollTrigger.refresh()}
+            />
+          )}
         <div className="absolute inset-0 bg-gradient-to-br from-sky-100/70 via-cyan-50/60 to-white/80 backdrop-blur-[2px]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,_var(--tw-gradient-stops))] from-sky-300/20 via-cyan-200/15 to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,_var(--tw-gradient-stops))] from-cyan-300/15 via-transparent to-transparent" />
